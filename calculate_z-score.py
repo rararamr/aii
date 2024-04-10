@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the CSV file (replace with your actual file path and column name)
-df = pd.read_csv("ShopeeScrap8.csv")
+df = pd.read_csv("ShopeeScrap9.csv")
 ratings = df["rating_star"]  # Replace with the appropriate column name
 
 # Calculate the mean and standard deviation of the ratings
@@ -13,15 +13,15 @@ std = ratings.std()
 z_scores = (ratings - mean) / std
 
 # Save the z-scores to a new CSV file
-z_scores.to_csv("z_scores1.csv")
+z_scores.to_csv("z_scores3.csv")
 
 # Let the user know the calculation is complete
 print("Z-scores have been saved to z_scores.csv")
 
-df = pd.read_csv("z_scores1.csv")
+df = pd.read_csv("z_scores3.csv")
 # Adjust thresholds based on z-scores (optional)
-positive_threshold = 0.89  # Adjust as needed, consider standard deviation
-negative_threshold = -2.36  # Adjust as needed
+positive_threshold = 0.20  # Adjust as needed, consider standard deviation
+negative_threshold = -4.90  # Adjust as needed
 
 # Group ratings based on z-scores
 
